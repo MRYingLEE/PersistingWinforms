@@ -12,7 +12,7 @@ Initially, my idea was inspired by http://www.cnblogs.com/VisualStudioDesigner/a
 # Using the code
 The coding with System.ComponentModel is not easy.  After days coding and debuging, I developed a class to simply the procedure to persist a Winforms component to C# code.  The core source code is as the following:
 
-‘’‘csharp
+'''csharp
 using Microsoft.CSharp;
 using System;
 using System.CodeDom;
@@ -192,11 +192,11 @@ namespace SmartData.Persistent
 
     }
 }
- '''
+'''
 
 A demo is attached to show how to use this class:
 
-![alt text](https://github.com/adam-p/markdown-here/raw/master/src/common/images/icon48.png "Logo Title Text 1")
+![DEMO](https://github.com/MRYingLEE/PersistingWinforms/blob/master/Component2Code.JPG "DEMO")
 
 
 1. You have to create the component in design mode according to the component type
@@ -236,13 +236,13 @@ private void button1_Click(object sender, EventArgs e)
 
      richTextBox1.Text = designer.OriginalCode();
  }
- '''
+'''
  
 And you may use System.Windows.Forms.PropertyGrid to change the properties of the component.
 
 3. At ANY time, you may get the code to generate the component
 
-’‘’csharp
+'''csharp
 richTextBox1.Text = designer.OriginalCode();
 ''' 
 
