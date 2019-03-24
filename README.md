@@ -12,7 +12,7 @@ Initially, my idea was inspired by http://www.cnblogs.com/VisualStudioDesigner/a
 # Using the code
 The coding with System.ComponentModel is not easy.  After days coding and debuging, I developed a class to simply the procedure to persist a Winforms component to C# code.  The core source code is as the following:
 
-'''csharp
+```csharp
 using Microsoft.CSharp;
 using System;
 using System.CodeDom;
@@ -192,7 +192,7 @@ namespace SmartData.Persistent
 
     }
 }
-'''
+```
 
 A demo is attached to show how to use this class:
 
@@ -201,7 +201,7 @@ A demo is attached to show how to use this class:
 
 1. You have to create the component in design mode according to the component type
 
-'''csharp
+```csharp
 private System.Windows.Forms.Button buttonInDESIGNmode;
 
 private static ComponentDesigner designer;
@@ -212,11 +212,11 @@ private void Form1_Load(object sender, EventArgs e)
 
     buttonInDESIGNmode = designer.ComponentInDesign as System.Windows.Forms.Button;
 }
-''' 
+``` 
 
 2. You may change the properties of the component in design mode at your will
 
-'''csharp
+```csharp
 private void button1_Click(object sender, EventArgs e)
  {
      times++;
@@ -236,19 +236,19 @@ private void button1_Click(object sender, EventArgs e)
 
      richTextBox1.Text = designer.OriginalCode();
  }
-'''
+```
  
 And you may use System.Windows.Forms.PropertyGrid to change the properties of the component.
 
 3. At ANY time, you may get the code to generate the component
 
-'''csharp
+```csharp
 richTextBox1.Text = designer.OriginalCode();
-''' 
+``` 
 
 An example of generated C# code is as the following:
 
-'''csharp
+```csharp
 
 public class Button_LiYing : System.Windows.Forms.Button
 {
@@ -269,7 +269,7 @@ public class Button_LiYing : System.Windows.Forms.Button
         this.ResumeLayout(false);
     }
 }
-'''
+```
 
 # Points of Interest
 Of course, we may go further. In a big software I am working, SmartData: Excel for Enterprise Data, (http://smartdatahk.blogspot.hk/), I do the following:
